@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackSpot - Authentic Indian Street Food</title>
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/info.css">
+    <style>
+        /* Chatbot Button Styling */
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff5733;
+            color: #fff;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .chatbot-button:hover {
+            background-color: #e74c3c;
+        }
+
+        /* Chatbot Container Styling */
+        .chatbot-container {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+        }
+
+        .chatbot-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>SnackSpot</h1>
+            <p>Authentic Indian Street Food & More</p>
+        </div>
+    </header>
+
+    <section class="info-section">
+        <div class="info-card">
+            <div class="info-item">
+                <img src="icons/location.svg" alt="Location">
+                <p>Ghandhiji Road, Madurai</p>
+            </div>
+            <div class="info-item">
+                <img src="icons/clock.svg" alt="Hours">
+                <p>Open: 5 PM - 9 PM</p>
+            </div>
+            <div class="info-item">
+                <img src="icons/phone.svg" alt="Phone">
+                <p>+91 98765 43210</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <div class="menu-grid" id="menuGrid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Visit Us</h3>
+                <p>Ghandhiji Road, Madurai</p>
+                <p>Open Hours: 5 PM - 9 PM</p>
+            </div>
+            <p class="copyright">&copy; 2024 SnackSpot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot Button and Container -->
+    <button class="chatbot-button" id="chatbotButton">&#x1F916;</button>
+    <div class="chatbot-container" id="chatbotContainer">
+        <iframe
+    allow="microphone;"
+    src="https://console.dialogflow.com/api-client/demo/embedded/41ce33b5-131b-4a2f-bcd3-89ca33a35352"></iframe>
+      
+    </div>
+
+    <script>
+        const chatbotButton = document.getElementById('chatbotButton');
+        const chatbotContainer = document.getElementById('chatbotContainer');
+
+        chatbotButton.addEventListener('click', () => {
+            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                chatbotContainer.style.display = 'block';
+                chatbotContainer.style.height="70%";
+                chatbotContainer.style.width="30%"
+            } else {
+                chatbotContainer.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
