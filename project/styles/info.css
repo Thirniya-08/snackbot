@@ -1,0 +1,41 @@
+@import 'variables.css';
+
+.info-section {
+    padding: 0 var(--spacing-md);
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.info-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--card-background);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+}
+.chat-bot{
+    margin-left: 950px;
+
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.info-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.info-item p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}

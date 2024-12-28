@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #e67e22;
+    --text-dark: #2d3436;
+    --text-light: #ffffff;
+    --background-light: #fff5eb;
+    --card-background: #ffffff;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 12px rgba(0, 0, 0, 0.15);
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
